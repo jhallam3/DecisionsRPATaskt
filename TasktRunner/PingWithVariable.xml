@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="1d7096cf-65b3-494b-9e05-0a548eda754b" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="PingServerURL" v_Input="decisions.com" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="StartProcessCommand" CommandID="5349c7fc-6d12-41c8-9b18-c54bfab39616" CommandName="StartProcessCommand" IsCommented="false" SelectionName="Start Process" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_ProgramName="ping.exe" v_ProgramArgs="{PingServerURL}" v_WaitForExit="Yes" />
+    </ScriptAction>
+  </Commands>
+  <Variables>
+    <ScriptVariable>
+      <VariableName>PingServerURL</VariableName>
+      <VariableValue xsi:type="xsd:string">decisions.com</VariableValue>
+    </ScriptVariable>
+  </Variables>
+</Script>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DecisionsFramework">
+      <HintPath>..\..\..\..\..\..\Program Files\Decisions\Decisions Server\bin\DecisionsFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;C:\Users\vagrant\source\repos\DecisionsRPATaskt\DecisionsTaskT\bin\Debug\netcoreapp3.1\DecisionsTaskT.dll&quot; &quot;C:\Program Files\Decisions\Decisions Server\modules\Decisions.Local\CoreServicesDlls&quot;" />
+  </Target>
+
+</Project>
