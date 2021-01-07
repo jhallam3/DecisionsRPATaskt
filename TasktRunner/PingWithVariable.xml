@@ -1,17 +1,305 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Commands>
-    <ScriptAction>
-      <ScriptCommand xsi:type="VariableCommand" CommandID="1d7096cf-65b3-494b-9e05-0a548eda754b" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="PingServerURL" v_Input="decisions.com" />
-    </ScriptAction>
-    <ScriptAction>
-      <ScriptCommand xsi:type="StartProcessCommand" CommandID="5349c7fc-6d12-41c8-9b18-c54bfab39616" CommandName="StartProcessCommand" IsCommented="false" SelectionName="Start Process" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_ProgramName="ping.exe" v_ProgramArgs="{PingServerURL}" v_WaitForExit="Yes" />
-    </ScriptAction>
-  </Commands>
-  <Variables>
-    <ScriptVariable>
-      <VariableName>PingServerURL</VariableName>
-      <VariableValue xsi:type="xsd:string">decisions.com</VariableValue>
-    </ScriptVariable>
-  </Variables>
+
+	<Commands>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="CommentCommand" CommandID="1dbc14d1-83a3-4f16-8b0d-5bcb10e729e1" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="250" LineNumber="1" PauseBeforeExeucution="false" v_Comment="Sample performs a calculation using UI Automation command" CommandEnabled="true" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="CommentCommand" CommandID="75c3311d-a0f1-4fc5-98e5-06595e9e721d" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="250" LineNumber="2" PauseBeforeExeucution="false" v_Comment="Start calc.exe and activate window" CommandEnabled="true" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="StartProcessCommand" CommandID="471a961a-4786-481d-9c82-95709bf7dc97" CommandName="StartProcessCommand" IsCommented="false" SelectionName="Start Process" DefaultPause="250" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_ProgramName="calc" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="ActivateWindowCommand" CommandID="f82dd691-aaa9-412d-9e57-2874393b4aa6" CommandName="ActivateWindowCommand" IsCommented="false" SelectionName="Activate Window" DefaultPause="250" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_WindowName="Calculator" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="SendKeysCommand" CommandID="c050550c-ba73-4c8b-91f9-c95f05c7a7ab" CommandName="SendKeysCommand" IsCommented="false" SelectionName="Send Keystrokes" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_WindowName="Calculator" v_TextToSend="{ValueA}" v_EncryptionOption="Not Encrypted" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="SendAdvancedKeyStrokesCommand" CommandID="ed98045b-de9e-447f-8b72-d6b68bd7497d" CommandName="SendAdvancedKeyStrokesCommand" IsCommented="false" SelectionName="Send Advanced Keystrokes" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" v_Comment="multiply" CommandEnabled="true" v_WindowName="Calculator">
+
+				<v_KeyActions>
+
+					<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+						<xs:element name="SendAdvancedKeyStrokesCommand121620.112253">
+
+							<xs:complexType>
+
+								<xs:sequence>
+
+									<xs:element name="Key" type="xs:string" minOccurs="0" />
+
+									<xs:element name="Action" type="xs:string" minOccurs="0" />
+
+								</xs:sequence>
+
+							</xs:complexType>
+
+						</xs:element>
+
+						<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="SendAdvancedKeyStrokesCommand121620.112253" msdata:UseCurrentLocale="true">
+
+							<xs:complexType>
+
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+									<xs:element ref="SendAdvancedKeyStrokesCommand121620.112253" />
+
+								</xs:choice>
+
+							</xs:complexType>
+
+						</xs:element>
+
+					</xs:schema>
+
+					<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+
+						<DocumentElement>
+
+							<SendAdvancedKeyStrokesCommand121620.112253 diffgr:id="SendAdvancedKeyStrokesCommand121620.1122531" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+
+								<Key>Number Pad * [Multiply]</Key>
+
+								<Action>Key Press (Down + Up)</Action>
+
+							</SendAdvancedKeyStrokesCommand121620.112253>
+
+						</DocumentElement>
+
+					</diffgr:diffgram>
+
+				</v_KeyActions>
+
+				<v_KeyUpDefault>Yes</v_KeyUpDefault>
+
+			</ScriptCommand>
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="SendKeysCommand" CommandID="adb02669-5528-488e-b049-823d7054d2cb" CommandName="SendKeysCommand" IsCommented="false" SelectionName="Send Keystrokes" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" CommandEnabled="true" v_WindowName="Calculator" v_TextToSend="{ValueB}" v_EncryptionOption="Not Encrypted" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="SendAdvancedKeyStrokesCommand" CommandID="d551d3ec-c5c6-499c-b462-7a1aae958491" CommandName="SendAdvancedKeyStrokesCommand" IsCommented="false" SelectionName="Send Advanced Keystrokes" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" v_Comment="equals" CommandEnabled="true" v_WindowName="Current Window">
+
+				<v_KeyActions>
+
+					<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+						<xs:element name="SendAdvancedKeyStrokesCommand121620.112648">
+
+							<xs:complexType>
+
+								<xs:sequence>
+
+									<xs:element name="Key" type="xs:string" minOccurs="0" />
+
+									<xs:element name="Action" type="xs:string" minOccurs="0" />
+
+								</xs:sequence>
+
+							</xs:complexType>
+
+						</xs:element>
+
+						<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="SendAdvancedKeyStrokesCommand121620.112648" msdata:UseCurrentLocale="true">
+
+							<xs:complexType>
+
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+									<xs:element ref="SendAdvancedKeyStrokesCommand121620.112648" />
+
+								</xs:choice>
+
+							</xs:complexType>
+
+						</xs:element>
+
+					</xs:schema>
+
+					<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+
+						<DocumentElement>
+
+							<SendAdvancedKeyStrokesCommand121620.112648 diffgr:id="SendAdvancedKeyStrokesCommand121620.1126481" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+
+								<Key>Enter [Return]</Key>
+
+								<Action>Key Press (Down + Up)</Action>
+
+							</SendAdvancedKeyStrokesCommand121620.112648>
+
+						</DocumentElement>
+
+					</diffgr:diffgram>
+
+				</v_KeyActions>
+
+				<v_KeyUpDefault>Yes</v_KeyUpDefault>
+
+			</ScriptCommand>
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="SendAdvancedKeyStrokesCommand" CommandID="5465e887-061e-4d5f-a4d5-cf06e6278b17" CommandName="SendAdvancedKeyStrokesCommand" IsCommented="false" SelectionName="Send Advanced Keystrokes" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" v_Comment="copy" CommandEnabled="true" v_WindowName="Calculator">
+
+				<v_KeyActions>
+
+					<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+						<xs:element name="SendAdvancedKeyStrokesCommand121620.114012">
+
+							<xs:complexType>
+
+								<xs:sequence>
+
+									<xs:element name="Key" type="xs:string" minOccurs="0" />
+
+									<xs:element name="Action" type="xs:string" minOccurs="0" />
+
+								</xs:sequence>
+
+							</xs:complexType>
+
+						</xs:element>
+
+						<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="SendAdvancedKeyStrokesCommand121620.114012" msdata:UseCurrentLocale="true">
+
+							<xs:complexType>
+
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+									<xs:element ref="SendAdvancedKeyStrokesCommand121620.114012" />
+
+								</xs:choice>
+
+							</xs:complexType>
+
+						</xs:element>
+
+					</xs:schema>
+
+					<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+
+						<DocumentElement>
+
+							<SendAdvancedKeyStrokesCommand121620.114012 diffgr:id="SendAdvancedKeyStrokesCommand121620.1140121" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+
+								<Key>Control [ControlKey]</Key>
+
+								<Action>Key Down</Action>
+
+							</SendAdvancedKeyStrokesCommand121620.114012>
+
+							<SendAdvancedKeyStrokesCommand121620.114012 diffgr:id="SendAdvancedKeyStrokesCommand121620.1140122" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+
+								<Key>C [C]</Key>
+
+								<Action>Key Press (Down + Up)</Action>
+
+							</SendAdvancedKeyStrokesCommand121620.114012>
+
+							<SendAdvancedKeyStrokesCommand121620.114012 diffgr:id="SendAdvancedKeyStrokesCommand121620.1140123" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+
+								<Key>Control [ControlKey]</Key>
+
+								<Action>Key Up</Action>
+
+							</SendAdvancedKeyStrokesCommand121620.114012>
+
+						</DocumentElement>
+
+					</diffgr:diffgram>
+
+				</v_KeyActions>
+
+				<v_KeyUpDefault>Yes</v_KeyUpDefault>
+
+			</ScriptCommand>
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="ClipboardGetTextCommand" CommandID="b89141b1-ccf9-4a9a-806f-5dcea1e39cfa" CommandName="ClipboardCommand" IsCommented="false" SelectionName="Get Clipboard Text" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="calcValue" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="CommentCommand" CommandID="d270335c-6484-4022-a669-72b111866912" CommandName="CommentCommand" IsCommented="false" SelectionName="Add Code Comment" DefaultPause="250" LineNumber="11" PauseBeforeExeucution="false" v_Comment="Show to User" CommandEnabled="true" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="VariableCommand" CommandID="eacfd5f8-470b-4e9e-a10b-fbe6cef18ca6" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="taskt.Result" v_Input="{calcValue}" />
+
+		</ScriptAction>
+
+		<ScriptAction>
+
+			<ScriptCommand xsi:type="CloseWindowCommand" CommandID="f26d1c3f-f776-4fa7-9700-e759ccd4f69e" CommandName="CloseWindowCommand" IsCommented="false" SelectionName="Close Window" DefaultPause="0" LineNumber="13" PauseBeforeExeucution="false" v_Comment="Close window" CommandEnabled="true" v_WindowName="Calculator" />
+
+		</ScriptAction>
+
+	</Commands>
+
+	<Variables>
+
+		<ScriptVariable>
+
+			<VariableName>calcValue</VariableName>
+
+			<VariableValue xsi:type="xsd:string"></VariableValue>
+
+		</ScriptVariable>
+
+		<ScriptVariable>
+
+			<VariableName>ValueA</VariableName>
+
+			<VariableValue xsi:type="xsd:string">1</VariableValue>
+
+		</ScriptVariable>
+
+		<ScriptVariable>
+
+			<VariableName>ValueB</VariableName>
+
+			<VariableValue xsi:type="xsd:string">2</VariableValue>
+
+		</ScriptVariable>
+
+	</Variables>
+
 </Script>

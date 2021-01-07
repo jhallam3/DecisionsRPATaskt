@@ -11,8 +11,11 @@ namespace TasktRunner
     {
         static void Main(string[] args)
         {
-            var fileconents = System.IO.File.ReadAllText("Variables.xml");
-            var data = new DecisionsTaskT.TasktXMLData().GetXMLVariables(fileconents);
+            //var fileconents = System.IO.File.ReadAllText("Variables.xml");
+            //var data = new DecisionsTaskT.TasktXMLData().GetXMLVariables(fileconents);
+            var fileconents = System.IO.File.ReadAllBytes("Variables.xml");
+            var data = new DecisionsTaskT.TasktXMLData().GetTasktVariables(fileconents);
+
 
         }
     }
